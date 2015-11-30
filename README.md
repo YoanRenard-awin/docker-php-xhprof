@@ -38,6 +38,10 @@ if (extension_loaded('xhprof')) {
 }
 ```
 
+### add the host on your /etc/hosts
+
+    [[Your docker box IP]] ... darwin.xhprof.dev.affiliatewindow.com
+
 ## See the profiling results
 
-http://darwin.xhprof.dev.affiliatewindow.com/
+[http://darwin.xhprof.dev.affiliatewindow.com/](http://darwin.xhprof.dev.affiliatewindow.com/)
