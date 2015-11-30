@@ -10,9 +10,9 @@ make build
 
 ### Update your Dockerfile
 
-Replace "FROM php:5.4-apache" by "FROM xhprof:5.4-apache" on your project Dockerfile and run 
+On your project, replace "FROM php:5.4-apache" by "FROM xhprof:5.4-apache" on your project Dockerfile and run 
 ```sh
-make build
+make build start
 ```
 
 ### How to profile your code
