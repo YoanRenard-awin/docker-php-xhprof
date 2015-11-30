@@ -2,9 +2,18 @@
 
 ## How to install
 
+### Build it
+
+```sh
+make build
+```
+
 ### Update your Dockerfile
 
-Replace "FROM php:5.4-apache" by "FROM xhprof:5.4-apache" on your project Dockerfile
+Replace "FROM php:5.4-apache" by "FROM xhprof:5.4-apache" on your project Dockerfile and run 
+```sh
+make build
+```
 
 ### How to profile your code
 
