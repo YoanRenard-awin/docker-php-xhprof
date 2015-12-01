@@ -1,9 +1,12 @@
-FROM php:5.4-apache
+FROM dockerhub.zanox.com:5000/zanox/php4
 
-RUN pecl config-set preferred_state beta
-RUN pecl install xhprof
-RUN pecl config-set preferred_state stable
-COPY docker/config/xhprof.ini /usr/local/etc/php/conf.d/xhprof.ini
+#RUN pecl config-set preferred_state beta
+#RUN pecl -d memory_limit="512M" install xhprof
+#RUN pecl -v download xhprof
+#RUN pear -v install xhprof
+#RUN pecl config-set preferred_state stable
+RUN bash install-pecl-module.sh xhprof 0.9.4
+#COPY docker/config/xhprof.ini /usr/local/etc/php/conf.d/xhprof.ini
 
 # Copy source code in
 COPY docker/config/xhprof.conf /etc/apache2/sites-enabled/xhprof.conf
